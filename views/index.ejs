@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+
+<body>
+  <a href="/new">Send new message</a>
+  <h1>
+    <%=title%>
+  </h1>
+  <ul>
+    <% for(const message of messages) {%>
+      <li>
+        <h2>
+          <%=message.user%>
+        </h2>
+        <p class="message">
+          <%=message.text%>
+        </p>
+        <p class="time">
+          <%=moment(message.added).fromNow()%>
+        </p>
+      </li>
+    <%}%>
+  </ul>
+</body>
+
+</html>

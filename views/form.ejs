@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/stylesheets/form.css">
+</head>
+
+<body>
+  <a href="/">Back to message board</a>
+  <h1>New message</h1>
+  <form method="POST" action="/new">
+    <label for="author">Name:</label>
+    <input type="text" name="author" id="author" placeholder="eg. John Doe" required>
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" placeholder="..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>
